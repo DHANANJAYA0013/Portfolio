@@ -1,4 +1,4 @@
-/* src/components/Header.css */
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -25,12 +25,13 @@ header.dark {
     font-weight: bold;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.05);
 }
 
+/* Navigation links */
 .nav-links {
-    list-style:none;
+    list-style: none;
     display: flex;
     gap: 20px;
 }
@@ -46,6 +47,7 @@ header.dark {
     color: var(--primary-color-hover, #007BFF);
 }
 
+/* Dark Mode Styles */
 .dark-mode-toggle {
     background: none;
     border: none;
@@ -58,10 +60,68 @@ header.dark {
     color: var(--primary-color-hover, #007BFF);
 }
 
-.App.dark .dark-mode-toggle{
+.App.dark .dark-mode-toggle {
     color: white;
 }
 
-.App.dark .nav-links li a{
+.App.dark .nav-links li a {
     color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust the logo size and add spacing */
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    /* Stack the nav links vertically */
+    .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg, #f0f0f0);
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Adjust dark mode toggle position */
+    .dark-mode-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .navbar {
+        position: relative; /* Allow position of elements relative to navbar */
+    }
+
+    /* Show the hamburger menu on small screens */
+    .hamburger-menu {
+        display: block;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        color: var(--primary-color, #0e0e0e);
+        cursor: pointer;
+    }
+
+    .hamburger-menu.active {
+        color: var(--primary-color-hover, #007BFF);
+    }
+}
+
+/* Tablet & Small Screen Responsiveness */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1rem; /* Smaller logo size for very small screens */
+    }
 }
