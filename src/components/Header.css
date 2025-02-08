@@ -1,4 +1,4 @@
-/* Header Styles */
+/* General Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -23,6 +23,7 @@ header.dark {
     margin: 0;
     font-size: 1.5rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .logo:hover {
@@ -72,12 +73,12 @@ header.dark {
 @media (max-width: 768px) {
     /* Adjust the logo size and add spacing */
     .logo h1 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
-    /* Stack the nav links vertically */
+    /* Hide the nav links by default */
     .nav-links {
-        display: none; /* Hide nav links by default */
+        display: none;
         flex-direction: column;
         gap: 15px;
         position: absolute;
@@ -87,24 +88,15 @@ header.dark {
         background-color: var(--header-bg, #f0f0f0);
         padding: 20px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10; /* Make sure the nav links are on top */
     }
 
+    /* Show the nav links when 'active' class is added */
     .nav-links.active {
         display: flex;
     }
 
-    /* Adjust dark mode toggle position */
-    .dark-mode-toggle {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-
-    .navbar {
-        position: relative; /* Allow position of elements relative to navbar */
-    }
-
-    /* Show the hamburger menu on small screens */
+    /* Hamburger menu */
     .hamburger-menu {
         display: block;
         font-size: 1.8rem;
@@ -117,9 +109,26 @@ header.dark {
     .hamburger-menu.active {
         color: var(--primary-color-hover, #007BFF);
     }
+
+    /* Dark mode toggle positioning for mobile */
+    .dark-mode-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .navbar {
+        position: relative; /* Allow position of elements relative to navbar */
+    }
+
+    /* Reduce space between the elements in mobile */
+    .nav-links li {
+        text-align: center;
+        font-size: 1rem;
+    }
 }
 
-/* Tablet & Small Screen Responsiveness */
+/* Small Devices & Tablet Responsiveness */
 @media (max-width: 480px) {
     .logo h1 {
         font-size: 1rem; /* Smaller logo size for very small screens */
