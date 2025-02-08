@@ -1,0 +1,42 @@
+/* src/components/Footer.css */
+.footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+p{
+    padding-bottom: 10px;
+
+}
+.social-links a {
+    /* padding-top: 10px; */
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #83caf1;  /* LinkedIn blue color */
+}
+
+.social-links a:active {
+    color: #5480ac;  /* LinkedIn active color */
+}
+
+.social-links a:nth-child(1):hover {
+    color: #a8e3f2; /* GitHub dark background color */
+}
+
+.social-links a:nth-child(1):active {
+    color: #000; /* GitHub active color */
+}
+
+.social-links a:nth-child(3):hover {
+    color: #E4405F;  /* Instagram pink/red color */
+}
+
+.social-links a:nth-child(3):active {
+    color: #C13584;  /* Instagram active color */
+}

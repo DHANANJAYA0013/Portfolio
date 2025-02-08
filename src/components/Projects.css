@@ -1,0 +1,148 @@
+/* src/components/Projects.css */
+.projects-section {
+    padding: 60px 20px;
+    text-align: center;
+    /* background-color: #f4f4f4; */
+    transition: background-color 0.3s ease;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsive grid layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.project-card {
+    /* background-color: #fff; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensures content stays at the top */
+    color: #333;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Subtle hover lift */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px; /* Reduced margin for better balance */
+    font-weight: 600;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+    flex-grow: 1;
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+/* Adjust project-link styles */
+.project-link {
+    padding: 12px 20px;
+    background-color: #f9ddd9;
+    color: rgb(39, 28, 28);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto; /* Pushes the button to the bottom */
+}
+
+.project-link:hover {
+    background-color: #4c9ff7;
+    transform: translateY(-2px); /* Adds a subtle button lift on hover */
+}
+
+/* Dark mode styles */
+.App.dark .projects-section {
+    background-color: #333;
+}
+
+.App.dark .project-card {
+    background-color: #444;
+    color: #fff;
+}
+
+.App.dark .project-card h3 {
+    color: #fff;
+}
+
+.App.dark .project-card p {
+    color: #ccc;
+}
+
+.App.dark .project-link {
+    background-color: #0056b3;
+}
+
+.App.dark .project-link:hover {
+    background-color: #003366;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 40px 15px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-card h3 {
+        font-size: 1.6rem; /* Slightly smaller font for mobile */
+    }
+
+    .project-card p {
+        font-size: 0.95rem;
+    }
+
+    .project-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+    }
+
+    .project-link {
+        font-size: 1rem;
+        padding: 10px 15px; /* Smaller padding for mobile */
+    }
+}

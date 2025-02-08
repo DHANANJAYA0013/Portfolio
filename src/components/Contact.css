@@ -1,0 +1,174 @@
+/* src/components/Contact.css */
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    /* background-color: #f4f4f4; */
+    transition: background-color 0.3s ease;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+/* Form Container */
+.contact-form {
+    width: 100%; /* Ensure the form takes full width available */
+    max-width: 500px; /* Adjust the max-width to make it smaller and more centered */
+    margin: 0 auto; /* Automatically center the form */
+    /* background-color: white; */
+    padding: 30px; /* Reduced padding for better space utilization */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    /* background-color: rgb(41, 35, 35); */
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #121010;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Dark Mode Styles */
+.App.dark .contact-section {
+    background-color: #333; /* Dark background for the section */
+}
+
+.App.dark .contact-section h2 {
+    color: white; /* Light heading color */
+}
+
+.App.dark .contact-form {
+    background-color: #444; /* Dark background for form */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.App.dark .contact-form input,
+.App.dark .contact-form textarea {
+    background-color: #555; /* Dark input fields */
+    color: white; /* Light text for input */
+    border-color: #666;
+}
+
+.App.dark .contact-form input:focus,
+.App.dark .contact-form textarea:focus {
+    border-color: #00bfff; /* Light blue border on focus */
+}
+
+.App.dark .submit-btn {
+    background-color: #00bfff;
+}
+
+.App.dark .submit-btn:hover {
+    background-color: #0099cc;
+}
+
+/* Responsive Styles */
+
+/* Large Screens (Desktop) */
+@media (min-width: 1200px) {
+    .contact-section {
+        padding: 80px 40px;
+    }
+
+    .contact-form {
+        padding: 50px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.1rem;
+    }
+
+    .submit-btn {
+        font-size: 1.2rem;
+        padding: 16px 32px;
+    }
+}
+
+/* Medium Screens (Tablet and Smaller Desktop) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .contact-form {
+        padding: 35px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .submit-btn {
+        font-size: 1.1rem;
+        padding: 14px 28px;
+    }
+}
+
+/* Small Screens (Mobile Phones) */
+@media (max-width: 767px) {
+    .contact-section {
+        padding: 40px 20px;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}
+
+/* Extra Small Screens (Portrait Mobile Phones) */
+@media (max-width: 480px) {
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}

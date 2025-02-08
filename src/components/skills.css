@@ -1,0 +1,113 @@
+/* Skills Section */
+.skills {
+  padding: 60px 20px;
+  text-align: center;
+  /* background-color: #f9f9f9; Light background */
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.skills p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Frontend & Backend Categories */
+.skills-category {
+  flex: 1;
+  min-width: 250px;
+  max-width: 45%;
+  text-align: center;
+}
+
+.skills-category h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+  color: #007BFF; /* Highlight color on hover */
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: #007BFF; /* Icon color */
+  margin-bottom: 10px;
+}
+
+/* Dark Mode Styles */
+.App.dark .skills {
+  background-color: #333;
+}
+
+.App.dark .skills h2 {
+  color: #fff;
+}
+
+.App.dark .skills p {
+  color: #bbb;
+}
+
+.App.dark .skills-list .skill-item {
+  color: #fff;
+}
+
+.App.dark .skills-list .skill-item:hover {
+  color: #00D1B2; /* Light blue-green for dark mode hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-category {
+    min-width: 80%;
+    max-width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .skills-list {
+    gap: 30px;
+  }
+
+  .skill-item {
+    margin-bottom: 20px;
+  }
+}

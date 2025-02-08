@@ -1,0 +1,67 @@
+/* src/components/Header.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--header-bg, #f0f0f0);
+    transition: background-color 0.3s ease;
+}
+
+header.dark {
+    --header-bg: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+.nav-links {
+    list-style:none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--primary-color, #0a0a0a);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color-hover, #007BFF);
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-color, #0e0e0e);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+    color: var(--primary-color-hover, #007BFF);
+}
+
+.App.dark .dark-mode-toggle{
+    color: white;
+}
+
+.App.dark .nav-links li a{
+    color: white;
+}
