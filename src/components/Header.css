@@ -102,7 +102,7 @@ header.dark {
         flex-direction: column;
         gap: 15px;
         width: 100%;
-        background-color: var(--header-bg, #f0f0f0);
+       /* background-color: var(--header-bg, #f0f0f0);*/
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         position: relative; /* Make it part of the flow, not floating */
@@ -129,4 +129,5 @@ header.dark {
         right: 50px;
     }
 }
+
 
