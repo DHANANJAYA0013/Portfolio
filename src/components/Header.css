@@ -63,13 +63,13 @@ header.dark {
 .dark-mode-toggle:hover {
     color: var(--primary-color-hover, #007BFF);
 }
-
+/*
 .App.dark .dark-mode-toggle,
 .App.dark .nav-links li a {
     color: white;
 }
 
-/* Mobile Styles */
+ Mobile Styles */
 @media (max-width: 768px) {
     .logo h1 {
         font-size: 1.3rem;
@@ -129,3 +129,4 @@ header.dark {
         right: 50px;
     }
 }
+
