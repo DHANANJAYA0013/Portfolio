@@ -1,7 +1,18 @@
-// Example Skills Section in JSX (React)
+// src/components/Skills.js
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from 'react-icons/fa';
-import { SiPython, SiFlask, SiDjango } from 'react-icons/si'; // Importing icons for Python, Flask, and Django
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact
+} from 'react-icons/fa';
+import {
+  SiPython,
+  SiFlask,
+  SiDjango,
+  SiFlutter,
+  SiDart
+} from 'react-icons/si';
 import './skills.css';
 
 const Skills = () => {
@@ -26,7 +37,14 @@ const Skills = () => {
           <FaReact className="skill-icon" />
           <p>React</p>
         </div>
-
+        <div className="skill-item">
+          <SiFlutter className="skill-icon" />
+          <p>Flutter</p>
+        </div>
+        <div className="skill-item">
+          <SiDart className="skill-icon" />
+          <p>Dart</p>
+        </div>
         <div className="skill-item">
           <SiPython className="skill-icon" />
           <p>Python</p>
